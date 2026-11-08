@@ -8,7 +8,7 @@ st.subheader("رفع ملف فيديو أو صوت")
 
 st.write("ارفع فيديو أو ملف صوتي")
 
-client = Groq(api_key="API_SEC")
+client = Groq(api_key=st.secrets["API_SEC"])
 
 def transcribe_audio_file(path):
     with open(path, "rb") as f:
